@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaDash - Users</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <i class='bx bxs-component'></i>
+                    <span>NovaDash</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-label">Main</div>
+                <div class="menu-item">
+                    <a href="dashboard.html" class="menu-link">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="users.html" class="menu-link active">
+                        <i class='bx bxs-user-detail'></i>
+                        <span>Users</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="analytics.html" class="menu-link">
+                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+                <div class="menu-label">General</div>
+                <div class="menu-item">
+                    <a href="settings.html" class="menu-link">
+                        <i class='bx bxs-cog'></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-link">
+                        <i class='bx bxs-help-circle'></i>
+                        <span>Help Center</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-navbar">
+                <div class="nav-left">
+                    <button class="sidebar-toggle"><i class='bx bx-menu'></i></button>
+                    <div class="search-bar">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search users...">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <button class="icon-btn" id="theme-toggle"><i class='bx bx-moon'></i></button>
+                    <button class="icon-btn"><i class='bx bx-bell'></i><span
+                            class="notification-badge">3</span></button>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=6366f1&color=fff" alt="Admin"
+                            class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Alex Morgan</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">User Management</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li>Home / Users</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class='bx bx-plus'></i> Add New User
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">All Users</h2>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-outline"><i class='bx bx-filter'></i> Filter</button>
+                            <button class="btn btn-outline"><i class='bx bx-export'></i> Export</button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Last Login</th>
+                                    <th>Joined Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                                                style="width: 32px; height: 32px; border-radius: 50%;" alt="">
+                                            <div>
+                                                <div style="font-weight: 500;">John Doe</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-secondary);">
+                                                    john@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Editor</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>2 hours ago</td>
+                                    <td>Oct 24, 2023</td>
+                                    <td><button class="icon-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <img src="https://ui-avatars.com/api/?name=Alice+Smith&background=random"
+                                                style="width: 32px; height: 32px; border-radius: 50%;" alt="">
+                                            <div>
+                                                <div style="font-weight: 500;">Alice Smith</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-secondary);">
+                                                    alice@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Subscriber</td>
+                                    <td><span class="status-badge status-inactive">Inactive</span></td>
+                                    <td>5 days ago</td>
+                                    <td>Sep 12, 2023</td>
+                                    <td><button class="icon-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <img src="https://ui-avatars.com/api/?name=Bob+Wilson&background=random"
+                                                style="width: 32px; height: 32px; border-radius: 50%;" alt="">
+                                            <div>
+                                                <div style="font-weight: 500;">Bob Wilson</div>
+                                                <div style="font-size: 0.75rem; color: var(--text-secondary);">
+                                                    bob@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Admin</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>Just now</td>
+                                    <td>Aug 05, 2023</td>
+                                    <td><button class="icon-btn"><i class='bx bx-dots-vertical-rounded'></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
